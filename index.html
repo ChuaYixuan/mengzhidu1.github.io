@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/showpic.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/music_disc.css"/>
+	<link rel="stylesheet" type="text/css" href="css/clock.css"/>
+	
+
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/timer.js"></script>
+	<script type="text/javascript" src="js/musicPlayer.js"></script>
+</head>
+<body bgcolor="lightgray">
+	
+	<!--背景-->
+	<div id="background">
+		<!--背景视频-->
+		<video id="bgvideo" playsinline autoplay loop>
+			<source src="video/movie.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	
+	<!--导航栏-->
+	<div id="navbg">
+	</div>
+	<div class="nav-part">
+		<ul id="head">
+			<li id="nav-icon"><img id="nav-logo" src="img/logo.png"></li>
+			<li><span><a href="index.html">🌠主页🌠</a></span></li>
+			<li><span><a href="article.html">🌠介紹🌠</a></span></li>
+			<li><span><a href="https://discord.gg/6C9YJbMu79">🌠DC鏈接🌠</a></span></li>
+			<li><span><a href="https://tinyurl.com/dreamOfcity">🌠伺服器鏈接🌠</a></span></li>
+			</li>
+		</ul>
+		
+		
+	</div>
+	
+	
+	<!--==========黑胶碟片旋转=========-->
+	<div id="songstatus">
+	    <div id="songstatus_pic" onclick="control(songNum)">
+	        <img src="img/music_disc.png" id="status_pic"><!--黑胶唱片-->
+	        <img src="img/discpointer.png" id="discpointer_pic"><!--指针-->
+	    </div>
+		<div id="songslist">
+			<li id="songName1" style="margin-top: 20px;">
+				<span onclick="start(1)">I'm in love</span>
+				<audio src="music/I'm%20in%20love.mp3" preload loop id="music1" class="music"></audio>
+			</li>
+			<li id="songName2">
+				<span onclick="start(2)">千与千寻</span>
+				<audio src="music/千与千寻.mp3" preload loop id="music2" class="music"></audio>
+			</li>
+			<li id="songName3">
+				<span onclick="start(3)">余生相</span>
+				<audio src="music/余生相.mp3" preload loop id="music3" class="music"></audio>
+			</li>
+			
+			<div id="playStatus">
+				<img src="img/songCover0.png" id="songCover">
+			</div>
+		</div>
+	</div>
+	
+	<!--Top按钮-->
+	<div id="totop">
+		<div id="totopline"></div>
+		<div id="tri">
+			<img id="bigtri" src="img/triangle.png" />
+			<img id="bigtri-0" src="img/triangle0.png" />
+		</div>
+	</div>
+
+
+	<!--中心标题-->
+	<div id=""><img id="" src="" /></div>
+	
+	<!--中心标题-->
+	<div id=""><img id="" src="" /></div>
+	
+	<!--中心标题-->
+	<div id=""><img id="" src="" /></div>
+	
+	<!--中心标题-->
+	<div id=""><img id="" src="" /></div>
+	
+	<!--中心标题-->
+	<div id=""><img id="" src="" /></div>
+
+	<!--正文-->
+	<div id="context">
+		<div id="firstp">
+			<!--下一个按钮-->
+			<div class="next-sign">
+				<img id="next-tri" src="img/triangle.png">
+				<div id="next-line"></div>
+			</div>
+			
+			<!--映像-->
+			<!--标题-->
+			<div class="Title">
+				<div class="title_1"><span>簡介</span></div>
+				<div class="title_2"><span>Introduction</span></div>
+			</div>
+			<!--时间表-->
+			<div id="Clock">
+				<img id="clock_" src="img/clock.png" >
+				<img id="clock_hour" src="img/clock_hour.png" >
+				<img id="clock_minute" src="img/clock_minute.png" >
+				<img id="clock_second" src="img/clock_second.png" >
+			</div>
+			<div id="timer">
+				<div id="time_year">2019年11月20日</div>
+				<div id="time_clock">0时0分0秒</div>
+				<div id="time_weekday">周一</div>	
+			</div>
+			
+			
+			<!--图1-->
+			<div class="showpic" id="showpic-1">
+				<img class="day" src="https://media.discordapp.net/attachments/811551034018758656/825329845583347722/unknown.png?width=1103&height=676" /></a>
+				</div>
+				<div class="pictitleR" id="pictit-1">
+					<span>玩家拍照日常</span><br>
+					<span>2021/03/27</span><br>
+					<div class="pictitle-0" id="pictit-1-1">
+					</div>
+				</div>
+			</a>
+			
+			<!--图2-->
+			<div class="showpic" id="showpic-2">
+				<img class="day" src="https://media.discordapp.net/attachments/811550948299112478/818058040656920606/unknown.png" /></a>
+			</div>
+				<div class="pictitleL" id="pictit-2">
+					<span>玩家拍照日常</span><br>
+					<div class="pictitle-0" id="pictit-2-1">
+					</div>
+				</div>
+			</a>
+			
+			<!--图3-->
+			<div class="showpic" id="showpic-3">
+				<img class="day" src="https://media.discordapp.net/attachments/811551034018758656/825334681934626826/3.png?width=1202&height=676" /></a>
+			</div>
+				<div class="pictitleL" id="pictit-3">
+					<span>玩家拍照日常</span><br>
+					<div class="pictitle-0" id="pictit-3-1">
+					</div>
+				</div>
+			</a>
+			
+		</div>
+		
+		
+		<!--流年-->
+		<div id="thirdp">
+			<div id="line"></div>
+			<div id="pg_title">
+				<!--下一个按钮-->
+				<div class="next-sign">
+					<img id="next-tri" src="img/triangle.png">
+					<div id="next-line"></div>
+				</div>
+				
+				<!--映像-->
+				<!--标题-->
+				<div class="Title">
+					<div class="title_1"><span>流年</span></div>
+					<div class="title_2"><span>TIME</span></div>
+				</div>
+			</div>
+			
+				
+			
+			<!--实现图片轮播效果-->
+			<div id="Upper">
+				<div class="carousel">
+					<div class="imgBox">
+						<ul>
+							<li class="list1"><img src="https://media.discordapp.net/attachments/811550948299112478/826118948365140018/20210329234136_1.jpg?width=1082&height=676" style="width:730px;height:336px;"></li>
+							<li class="list2"><img src="https://media.discordapp.net/attachments/811550948299112478/825681880338661436/dbaf83-b2.webp?width=1440&height=660" style="width:730px;height:336px;"></li>
+							<li class="list3"><img src="https://media.discordapp.net/attachments/811550948299112478/825640958343249930/unknown.png?width=1197&height=676" style="width:730px;height:336px;"></li>
+							<li class="list4"><img src="https://media.discordapp.net/attachments/811550948299112478/825238121725558784/2.png?width=1202&height=676" style="width:730px;height:336px;"></li>
+							<li class="list5"><img src="https://media.discordapp.net/attachments/811550948299112478/825765208353013840/unknown.png" style="width:730px;height:336px;"></li>
+							<li class="list6"><img src="https://media.discordapp.net/attachments/811550948299112478/817924718166147112/20210307084849_1.jpg?width=1202&height=676" style="width:730px;height:336px;"></li>
+						</ul>
+					</div>
+						<div class="lineBar">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+			</div>
+			
+		</div>
+		
+	</div>
+		<!--底部-->
+	<div id="pgbottom">
+		<div id="botttitle">
+			<div class="vtcChar" id="botchar1">
+				/ 时光悠然 ，牵动着如烟的往事 ， 
+			</div>
+			<div class="vtcChar" id="botchar2">
+				你站在岁月的彼岸 ，微笑如初 /
+			</div>
+			<div id="pginfo">
+				<span id="pginfo_made">
+					&lt;&lt; 由夢之都※技術人員製作>><br /><br />
+					&lt;&lt; 于2021年4月1日>>
+				</span>
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+<script type="text/javascript">
+//totop按钮
+$("#bigtri").click(function(){//单击事件
+	$("html,body").animate({scrollTop:0},400);
+})
+$(window).scroll(function(){//窗体滚动条滚动事件
+	if($(window).scrollTop()<5){
+		$(".nav-part").fadeIn(300);
+	}else{
+		$(".nav-part").fadeOut(300);
+	}
+	if($(window).scrollTop()>400){
+		$("#totop").fadeIn(300);
+	}else{
+		$("#totop").fadeOut(300);
+	}
+})
+
+//轮播图
+var aLi = document.querySelectorAll(".imgBox li");
+var aSpan = document.querySelectorAll(".lineBar span");
+var oImgbox = document.querySelector(".imgBox");
+var aName = []; //存放元素的名字
+var index = 0;//初始状态下第几个按钮变色
+setColor();
+for(var item of aLi){//定义一个循环语句，将图片名字赋给aName
+	aName.push(item.classList[0]);
+}
+function nextPic() { //向下翻页
+	aName.unshift(aName[5]); //把数组最后一个值复制并插入到数组第一个位置
+	aName.pop();  //删除数组的最后一个元素
+	for (var i=0,len=aLi.length;i<len;i++){
+		//预存数组长度，减少循环语句的性能消耗
+		aLi[i].setAttribute("class",aName[i]);
+		//重新给每个元素设置新的名字
+	}
+	index++;
+	if(index>5)index=0;
+	setColor();
+}
+function nowPic(){
+	self.location.href="album.html"
+}
+function prePic() {
+	aName.push(aName[0]); //把数组第一个值复制并插入到数组最后一个位置
+	aName.shift();//删除第一个
+	for (var i=0,len=aLi.length;i<len;i++){
+		//预存数组长度，减少循环语句的性能消耗
+		aLi[i].setAttribute("class",aName[i]);
+		//重新给每个元素设置新的名字
+	}
+	index--;
+	if(index<0)index=5;
+	setColor();
+}
+function setColor() {
+	for(var item of aSpan){
+		item.style.backgroundColor="#ccc";
+	}
+	aSpan[index].style.backgroundColor = "#45c17c";
+}
+var eleList=["list1","list2","list3"];
+var eleAct=["prePic","nowPic","nextPic"];
+oImgbox.addEventListener("click",function (ev) {
+	var ele = ev.target.parentNode;//获取点中的li元素
+	var eleName=ele.classList[0];//获取li元素的名字
+	window[eleAct[eleList.indexOf(eleName)]]();//判断应该执行那个函数
+})
+setInterval("nextPic()",3000);//设置每隔5s执行一次nextPic函数
+</script>
+
+</html>
